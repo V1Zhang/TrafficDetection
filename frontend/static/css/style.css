@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.camera-section {
+    width: 48%;
+}
+
+.results-section {
+    width: 48%;
+}
+
+.camera-container {
+    margin-top: 20px;
+}
+
+#videoCanvas {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.detection-result {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.detection-result img {
+    max-width: 100px;
+    height: auto;
+}
+
+.camera-select {
+    margin-bottom: 15px;
+}
+
+.progress-container {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    color: #000;
+    font-size: 12px;
+}

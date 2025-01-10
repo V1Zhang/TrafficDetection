@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>交通标志识别系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="camera-section">
+            <h2>视频输入</h2>
+            <div class="input-select">
+                <select id="videoSource">
+                    <option value="camera">摄像头</option>
+                    <option value="file">视频文件</option>
+                </select>
+
+                <!-- 摄像头选项 -->
+                <div id="cameraOptions" class="source-options">
+                    <select id="cameraSource">
+                        <option value="local">本地摄像头</option>
+                        <option value="ip">网络摄像头</option>
+                    </select>
+                    <input type="text" id="ipCameraUrl" placeholder="输入网络摄像头URL" style="display: none;">
+                </div>
+
+                <!-- 视频文件选项 -->
+                <div id="fileOptions" class="source-options" style="display: none;">
+                    <input type="file" id="videoFile" accept="video/*">
+                    <div id="uploadProgress" class="progress-container" style="display: none;">
+                        <div class="progress-bar"></div>
+                        <div class="progress-text">0%</div>
+                    </div>
+                </div>
+
+                <button id="startButton">启动</button>
+            </div>
+            <div class="video-container">
+                <canvas id="videoCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>识别结果</h2>
+            <div id="detectionResults">
+                <!-- 识别结果将在这里动态显示 -->
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
